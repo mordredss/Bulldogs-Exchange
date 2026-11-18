@@ -1,0 +1,336 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #D0D0D0;
+            min-height: 100vh;
+        }
+
+        .dashboard-container {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #D0D0D0;
+            position: relative;
+            padding-right: 3%;
+            padding-bottom: 20px;
+        }
+
+        /* Header Section */
+        .header-section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px 39px;
+            margin: 9.5px 43px 37px 43px;
+            height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header-title {
+            color: #3B3535;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header-subtitle {
+            color: #3B3535;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        /* Stats Cards Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 31px;
+            margin: 0 0 25px 0;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 45px 26px;
+            height: 191px;
+            position: relative;
+            width: 100%;
+        }
+
+        .stat-label {
+            color: #3B3535;
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            color: #3B3535;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .stat-icon {
+            position: absolute;
+            top: 37px;
+            right: 33px;
+            width: 35px;
+            height: 35px;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin: 0 0 25px 0;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px 27px;
+            width: 100%;
+        }
+
+        .analytics-card {
+            height: 352px;
+        }
+
+        .orders-card {
+            height: 352px;
+        }
+
+        .card-title {
+            color: #3B3535;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .orders-title {
+            font-size: 20px;
+        }
+
+        /* Chart Placeholder */
+        .chart-placeholder {
+            background: #484444;
+            border-radius: 12px;
+            height: 238px;
+            margin-top: 20px;
+        }
+
+        /* Tables */
+        .table-container {
+            margin-top: 25px;
+        }
+
+        .table-header {
+            display: grid;
+            padding: 12px 0;
+            border-bottom: 2px solid #AAAAAA;
+            margin-bottom: 15px;
+        }
+
+        .orders-header {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .table-header-cell {
+            color: #636363;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .table-header-cell.center {
+            text-align: center;
+        }
+
+        .table-row {
+            display: grid;
+            padding: 12px 0;
+            border-bottom: 1px solid #AAAAAA;
+        }
+
+        .orders-row {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .table-cell {
+            color: #636363;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .table-cell.left {
+            text-align: left;
+        }
+
+        .table-cell.amount {
+            font-weight: 700;
+        }
+
+        /* Bottom Grid */
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            gap: 30px;
+            margin: 0 0 25px 0;
+        }
+
+        .bottom-card {
+            background: white;
+            border-radius: 12px;
+            padding: 22px 27px;
+            height: 240px;
+            width: 100%;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        .inventory-header {
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .inventory-row {
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .summary-header {
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .summary-row {
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+        }
+
+
+        /* Remove horizontal margins from inner sections */
+        .header-section,
+        .stats-grid,
+        .content-grid,
+        .bottom-grid {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        /* Remove horizontal margins from content and bottom grids */
+        .stats-grid,
+        .content-grid,
+        .bottom-grid {
+            margin: 0 0 25px 0;
+        }
+
+        /* Make cards fill their grid columns */
+        .stat-card,
+        .content-card,
+        .bottom-card {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Chart Container Styling */
+        .chart-container {
+            position: relative;
+            height: 280px;
+            width: 100%;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .chart-placeholder {
+            /* Keep existing placeholder styles but add chart-container styles */
+            position: relative;
+            height: 280px;
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* Update analytics card to accommodate chart */
+        .analytics-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            height: 352px;
+            overflow: hidden;
+        }
+
+        .analytics-card .card-title {
+            margin-bottom: 15px;
+            color: #374151;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .dashboard-container {
+                max-width: 100%;
+                padding: 0 20px;
+                padding-bottom: 3%;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                margin: 0 0 25px 0;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                margin: 0 0 25px 0;
+            }
+            
+            .bottom-grid {
+                grid-template-columns: 1fr;
+                margin: 0;
+            }
+            
+            .header-section {
+                margin: 9.5px 0 37px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-title {
+                font-size: 28px;
+            }
+            
+            .orders-header,
+            .orders-row,
+            .inventory-header,
+            .inventory-row,
+            .summary-header,
+            .summary-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .table-cell,
+            .table-header-cell {
+                text-align: left;
+            }
+        }

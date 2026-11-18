@@ -1,0 +1,233 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.checkout-wrapper {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+
+.back-button:hover {
+    background: #f8f9fa;
+}
+
+.back-icon {
+    width: 20px;
+    height: 20px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E");
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #35408E;
+    padding: 2rem;
+    margin: 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.checkout-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #35408E;
+    margin-bottom: 1.5rem;
+}
+
+/* Address Selection */
+.radio-group {
+    margin-bottom: 1rem;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.radio-group label {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.saved-address {
+    margin: 1rem 0 2rem 1.5rem;
+}
+
+.address-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.address-header {
+    margin-bottom: 0.5rem;
+}
+
+.address-details p {
+    margin: 0.25rem 0;
+    color: #666;
+}
+
+/* Form Styles */
+.new-address-form {
+    margin-left: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #35408E;
+    box-shadow: 0 0 0 2px rgba(53, 64, 142, 0.2);
+}
+
+/* Order Summary */
+.order-summary-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.checkout-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.checkout-item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.item-size,
+.item-quantity {
+    display: block;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.item-price {
+    font-weight: 600;
+    color: #35408E;
+}
+
+.order-totals {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.final-total {
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: #35408E;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e9ecef;
+    margin-top: 1rem;
+}
+
+.place-order-btn {
+    width: 100%;
+    background: #35408E;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background 0.2s;
+}
+
+.place-order-btn:hover {
+    background: #2a3478;
+}
+
+.place-order-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .checkout-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
